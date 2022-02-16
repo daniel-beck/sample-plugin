@@ -1,1 +1,1 @@
-# sample-plugin
+# Sample Plugin that runs the scan
