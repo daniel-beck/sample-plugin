@@ -1,6 +1,7 @@
 name: Jenkins Security Scan
 on:
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+  # TODO: Consider only running when CI passes?
   push:
     branches:
       - main
