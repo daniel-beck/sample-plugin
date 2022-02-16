@@ -1,4 +1,4 @@
-name: Jenkins Security Scan
+name: Jenkins Security Scan (Caller)
 on:
   # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
   push:
@@ -9,5 +9,5 @@ on:
   workflow_dispatch:
 
 jobs:
-  jenkins-security-scan:
+  caller:
     uses: daniel-beck-org/jenkins-security-scan/.github/workflows/jenkins-security-scan.yaml@v1
