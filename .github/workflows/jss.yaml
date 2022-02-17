@@ -1,7 +1,5 @@
 name: Jenkins Security Scan
 on:
-  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
-  # TODO: Consider only running when CI passes?
   push:
     branches:
       - main
@@ -11,4 +9,4 @@ on:
 
 jobs:
   security-scan:
-    uses: daniel-beck-org/jenkins-security-scan/.github/workflows/jenkins-security-scan.yaml@v1
+    uses: daniel-beck-org/jenkins-security-scan/.github/workflows/jenkins-security-scan.yaml@main # TODO Migrate
