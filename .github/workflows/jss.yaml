@@ -10,3 +10,5 @@ on:
 jobs:
   security-scan:
     uses: daniel-beck-org/jenkins-security-scan/.github/workflows/jenkins-security-scan.yaml@main # TODO Migrate
+    with:
+      java-cache: maven
