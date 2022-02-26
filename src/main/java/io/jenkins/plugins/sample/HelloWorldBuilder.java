@@ -67,6 +67,13 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.ok();
         }
 
+        public FormValidation doCheckLanguage(@QueryParameter String value) {
+            if (value.matches("[a-z]+")) {
+                return FormValidation.ok();
+            }
+            return FormValidation.warning("non-alpha chars!");
+        }
+
         @Override
         public boolean isApplicable(Class<? extends AbstractProject> aClass) {
             return true;
