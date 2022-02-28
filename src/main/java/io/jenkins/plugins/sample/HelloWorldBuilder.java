@@ -18,6 +18,7 @@ import java.io.IOException;
 import jenkins.tasks.SimpleBuildStep;
 import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.DataBoundSetter;
+import org.kohsuke.stapler.verb.POST;
 
 public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
 
@@ -67,6 +68,7 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.ok();
         }
 
+        @POST
         public FormValidation doCheckLanguage(@QueryParameter String value) {
             if (value.matches("[a-z]+")) {
                 return FormValidation.ok();
