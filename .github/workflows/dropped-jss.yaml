@@ -7,13 +7,6 @@ on:
     types: [ opened, synchronize, reopened ]
   workflow_dispatch:
 
-permissions:
-  security-events: write
-
-  # Private repo support
-  contents: read # For actions/checkout
-  actions: read # For github/codeql-action/upload-sarif
-
 jobs:
   security-scan:
     uses: jenkins-infra/jenkins-security-scan/.github/workflows/jenkins-security-scan.yaml@drop-permissions
