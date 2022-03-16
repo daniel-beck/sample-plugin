@@ -7,7 +7,12 @@ on:
     types: [ opened, synchronize, reopened ]
   workflow_dispatch:
 
-permissions: read-all
+permissions:
+  security-events: write
+
+  # Private repo support
+  contents: read # For actions/checkout
+  actions: read # For github/codeql-action/upload-sarif
 
 jobs:
   security-scan:
