@@ -40,8 +40,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           distribution: 'temurin'
-          java-version: ${{ inputs.java-version }}
-          cache: ${{ inputs.java-cache }}
+          java-version: 11
+          cache: maven
       - name: Run Scan
         shell: bash
         env:
