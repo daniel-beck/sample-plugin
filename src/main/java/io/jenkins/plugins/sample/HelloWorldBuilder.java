@@ -67,6 +67,11 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.ok();
         }
 
+        public FormValidation doCheckName2(@QueryParameter String value, @QueryParameter boolean useFrench) {
+            Jenkins.get().getItemByFullName(value);
+            return FormValidation.ok();
+        }
+
         @Override
         public boolean isApplicable(Class<? extends AbstractProject> aClass) {
             return true;
