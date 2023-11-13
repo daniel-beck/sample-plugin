@@ -77,6 +77,13 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.warning("non-alpha chars!");
         }
 
+        public FormValidation doCheckLanguage2(@QueryParameter String value) {
+            if (value.matches("[a-z]+")) {
+                return FormValidation.ok();
+            }
+            return FormValidation.warning("non-alpha chars!");
+        }
+
         public FormValidation doCheckName2(@QueryParameter String value, @QueryParameter boolean useFrench) {
             Jenkins.get().getItemByFullName(value);
             return FormValidation.ok();
