@@ -10,6 +10,7 @@ import hudson.model.Run;
 import hudson.model.TaskListener;
 import hudson.tasks.Builder;
 import hudson.tasks.BuildStepDescriptor;
+import jenkins.model.Jenkins;
 import org.kohsuke.stapler.DataBoundConstructor;
 import org.kohsuke.stapler.QueryParameter;
 
@@ -74,6 +75,11 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
                 return FormValidation.ok();
             }
             return FormValidation.warning("non-alpha chars!");
+        }
+
+        public FormValidation doCheckName2(@QueryParameter String value, @QueryParameter boolean useFrench) {
+            Jenkins.get().getItemByFullName(value);
+            return FormValidation.ok();
         }
 
         @Override
