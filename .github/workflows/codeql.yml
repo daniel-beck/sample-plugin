@@ -56,7 +56,6 @@ jobs:
           disable-default-queries: true
           packs:
           - daniel-beck-org/java-queries
-          queries:
           - codeql/java-queries:AlertSuppression.ql
           - codeql/java-queries:AlertSuppressionAnnotations.ql
         # If you wish to specify custom queries, you can do so here or in a config file.
