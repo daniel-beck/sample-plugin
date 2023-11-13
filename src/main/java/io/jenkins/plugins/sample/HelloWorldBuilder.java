@@ -70,6 +70,7 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
         }
 
         @POST
+        // lgtm[jenkins/no-permission-check]
         public FormValidation doCheckLanguage(@QueryParameter String value) {
             if (value.matches("[a-z]+")) {
                 return FormValidation.ok();
