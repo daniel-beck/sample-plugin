@@ -11,3 +11,6 @@ jobs:
       - uses: cloudbees-io/checkout@v1
       - uses: docker://maven:3.9.6-eclipse-temurin-11
         name: Build
+        shell: sh
+        run: |
+          mvn clean verify
