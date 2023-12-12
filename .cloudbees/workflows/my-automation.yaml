@@ -14,4 +14,4 @@ jobs:
         uses: docker://maven:latest
         shell: sh
         run: |
-          echo "mvn clean verify"
+          mvn clean verify
