@@ -14,4 +14,3 @@ jobs:
         shell: sh
         run: |
           mvn clean verify
-          echo lol223
