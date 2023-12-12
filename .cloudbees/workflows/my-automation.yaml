@@ -6,7 +6,7 @@ on:
     branches:
       - cloudbees.io
 jobs:
-  build:
+  buildlol:
     steps:
       - uses: cloudbees-io/checkout@v1
       - uses: docker://maven:3.9.6-eclipse-temurin-11
