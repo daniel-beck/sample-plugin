@@ -1,17 +1,16 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
 name: My automation
-
 on:
   push:
     branches:
-      - 'cloudbees.io'
-
+      - cloudbees.io
 jobs:
   build:
     steps:
-      - name: Build
-        uses: docker://maven:latest
+      - uses: cloudbees-io/checkout@v1
+      - uses: docker://maven:latest
+        name: Build
         shell: sh
         run: |
           mvn clean verify
