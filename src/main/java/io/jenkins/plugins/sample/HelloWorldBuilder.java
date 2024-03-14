@@ -79,6 +79,7 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.warning("non-alpha chars!");
         }
 
+        // lgtm[jenkins/no-permission-check]
         public FormValidation doCheckLanguage2(@QueryParameter String value) {
             if (value.matches("[a-z]+")) {
                 return FormValidation.ok();
