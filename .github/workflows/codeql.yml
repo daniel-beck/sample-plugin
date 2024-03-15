@@ -87,7 +87,7 @@ jobs:
         category: "/language:${{matrix.language}}"
         upload: failure-only
         upload-database: false
-    - name: Filter CodeQL SARIF
-      uses: daniel-beck-org/remove-suppressed-findings-action@main
+    # - name: Filter CodeQL SARIF
+    #   uses: daniel-beck-org/remove-suppressed-findings-action@main
     - name: Upload SARIF
       uses: github/codeql-action/upload-sarif@v2
