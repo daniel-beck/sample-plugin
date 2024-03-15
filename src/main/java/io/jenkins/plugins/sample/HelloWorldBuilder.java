@@ -69,7 +69,6 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.ok();
         }
 
-        
         @POST
         // lgtm[jenkins/no-permission-check]
         public FormValidation doCheckLanguage(@QueryParameter String value) {
