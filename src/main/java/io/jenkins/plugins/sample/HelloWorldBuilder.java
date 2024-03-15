@@ -86,6 +86,7 @@ public class HelloWorldBuilder extends Builder implements SimpleBuildStep {
             return FormValidation.warning("non-alpha chars!");
         }
 
+        // lgtm[jenkins/no-permission-check]
         public FormValidation doCheckName2(@QueryParameter String value, @QueryParameter boolean useFrench) {
             Jenkins.get().getItemByFullName(value);
             return FormValidation.ok();
