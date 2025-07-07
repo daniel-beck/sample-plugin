@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - cloudbees.io
+  workflow_dispatch:
 jobs:
   buildlol:
     steps:
