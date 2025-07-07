@@ -15,5 +15,9 @@ jobs:
         shell: sh
         run: |
           echo ::add-mask::1234
+      - uses: docker://maven:3.9.6-eclipse-temurin-11
+        name: Build 2
+        shell: sh
+        run: |
           echo 1234
           echo foo12345
