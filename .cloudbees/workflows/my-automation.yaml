@@ -14,5 +14,6 @@ jobs:
         name: Build
         shell: sh
         run: |
-          mvn clean verify
-          echo foo314
+          echo ::add-mask::1234
+          echo 1234
+          echo foo12345
